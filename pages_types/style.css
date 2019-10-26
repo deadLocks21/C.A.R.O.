@@ -1,0 +1,45 @@
+body {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background-color: #1A1A1A;
+    color: #C5C5C5;
+    margin-top: 0px;
+}
+
+h1 {
+    font-size: 30px;
+    margin:0px;
+    text-align: justify-all;
+}
+
+div {
+    margin-bottom: 30px;
+}
+
+ul {
+    margin: 0px;
+}
+
+#nomProgramme {
+    font-size: 35px;
+    color:red;
+    text-decoration:underline;
+}
+
+#role {
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.souligner {
+    text-decoration:underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.niveau1 {
+    font-size: 25px;
+    text-decoration:underline;
+    text-align: justify;
+}
