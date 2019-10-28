@@ -5,6 +5,8 @@ from MonApp.MonApp import *
 
 APPLICATION_NAME = "CAA-createAnAlgorithm""CAA-createAnAlgorithm"
 
+CANVAS_INFO = {'options': ('root', 'borderwidth', 'background', 'height')}
+
 root = Tk()
 w = getScreenWidth(root)
 h = getScreenHeight(root)

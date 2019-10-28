@@ -8,6 +8,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -49,7 +63,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.CAA">
+  <component name="RunManager" selected="Python.widgetsBase">
     <configuration name="CAA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CAA-createAnAlgorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,13 +130,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="widgetsBase" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CAA-createAnAlgorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MonApp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MonApp/widgetsBase.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.python" />
       <item itemvalue="Python.mainFrame" />
       <item itemvalue="Python.CAA" />
+      <item itemvalue="Python.widgetsBase" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.widgetsBase" />
         <item itemvalue="Python.CAA" />
         <item itemvalue="Python.mainFrame" />
       </list>
@@ -140,7 +178,8 @@
       <updated>1572197571028</updated>
       <workItem from="1572197576963" duration="608000" />
       <workItem from="1572199018924" duration="6689000" />
-      <workItem from="1572212633968" duration="3017000" />
+      <workItem from="1572212633968" duration="4732000" />
+      <workItem from="1572292774608" duration="961000" />
     </task>
     <servers />
   </component>
@@ -163,6 +202,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$CAA.coverage" NAME="CAA Coverage Results" MODIFIED="1572215672632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$mainFrame.coverage" NAME="mainFrame Coverage Results" MODIFIED="1572215481864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$widgetsBase.coverage" NAME="widgetsBase Coverage Results" MODIFIED="1572293249132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MonApp" />
     <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$python.coverage" NAME="python Coverage Results" MODIFIED="1572202211553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
