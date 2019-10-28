@@ -6,8 +6,11 @@ import sqlite3
 conn = sqlite3.connect('widgets.db')
 cursor = conn.cursor()
 
-cursor.execute("""INSERT INTO canvas (nomCanvas, root, height, width, background) 
+try:
+    cursor.execute("""INSERT INTO canvas (nomCanvas, root, height, width, background) 
 VALUES ('main', 'root', 0, 0, '#CC33FF');""")
+except sqlite3.IntegrityError:  # Erreur qui apparait en cas de doublon
+    pass
 
 conn.commit()
 

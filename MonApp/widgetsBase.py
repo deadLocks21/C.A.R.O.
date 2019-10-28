@@ -8,7 +8,7 @@ cursor = conn.cursor()
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS canvas(
-     nomCanvas VARCHAR(43) NOT NULL,
+     nomCanvas VARCHAR(43) UNIQUE NOT NULL,
      root VARCHAR(43) NOT NULL,
      borderwidth INTEGER DEFAULT 2,
      background VARCHAR(43) DEFAULT '#E4E4E4',
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS canvas(
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS button(
-    nomButton VARCHAR(43) NOT NULL,
+    nomButton VARCHAR(43) UNIQUE NOT NULL,
     root VARCHAR(43) NOT NULL,
     text TEXT DEFAULT '',
     textvariable VARCHAR(43) DEFAULT NULL,
@@ -60,6 +60,6 @@ CREATE TABLE IF NOT EXISTS label(
 
 conn.commit()
 
-# from CAAwidgets import *
+from CAAwidgets import *
 
 conn.close()

@@ -57,6 +57,7 @@ def placeCanvas(info, canvas, w, h):
     # Selectionner les info de la recherche
     for row in info:
         row = row
+        print(row)
 
     # Transformer les infos en variables
     (nomCanvas, root, borderwidth, background, height, highlightbackground, highlightcolor, highlightthickness, relief, width, x, y) = row
