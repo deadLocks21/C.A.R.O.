@@ -2,6 +2,9 @@
 # -*- encoding: utf-8 *-
 
 from tkinter import *
+from MonApp.widgetsBase import *
+from MonApp.widgetsMethodes import *
+
 
 
 def setFullScreen(r):
@@ -34,9 +37,28 @@ def startApp(r):
     r.mainloop()
 
 
-def createLayout(r, w, h):
-    return Canvas(r, highlightthickness=0, width=w, height=h, background='#6746F4')
+def createCanvas(info, r):
+    """Creer et retourne un canvas a partir d'une ligne de la BDD"""
+    # Selectionner les info de la recherche
+    for row in info:
+        row = row
+
+    # Transformer les infos en variables
+    (nomCanvas, root, borderwidth, background, height, highlightbackground, highlightcolor, highlightthickness, relief, width, x, y) = row
+
+    # Creer le canvas
+    c = Canvas(r, background=background, borderwidth=borderwidth, highlightbackground=highlightbackground,highlightcolor=highlightcolor, highlightthickness=highlightthickness, relief=relief)
+
+    return c  # Retourner le canvas
 
 
-def placeLayout(l, w, h):
-    l.place(x=0, y=0, width=w, height=h)
+def placeCanvas(info, canvas, w, h):
+    """Place un canvas a partir d'une ligne de la BDD"""
+    # Selectionner les info de la recherche
+    for row in info:
+        row = row
+
+    # Transformer les infos en variables
+    (nomCanvas, root, borderwidth, background, height, highlightbackground, highlightcolor, highlightthickness, relief, width, x, y) = row
+
+    canvas.place(x=x, y=y, width=w, height=h)  # Placement du canvas

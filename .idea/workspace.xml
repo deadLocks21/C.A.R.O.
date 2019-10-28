@@ -68,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.widgetsBase">
+  <component name="RunManager" selected="Python.CAA">
     <configuration name="CAA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CAA-createAnAlgorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,7 +91,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mainFrame" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="CAAwidgets" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CAA-createAnAlgorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -104,7 +104,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mainFrame.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CAAwidgets.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -135,6 +135,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="widgetsAdd" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CAA-createAnAlgorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MonApp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MonApp/widgetsAdd.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="widgetsBase" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CAA-createAnAlgorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,17 +179,43 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="widgetsMethodes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CAA-createAnAlgorithm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MonApp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MonApp/widgetsMethodes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.python" />
-      <item itemvalue="Python.mainFrame" />
       <item itemvalue="Python.CAA" />
       <item itemvalue="Python.widgetsBase" />
+      <item itemvalue="Python.widgetsAdd" />
+      <item itemvalue="Python.widgetsMethodes" />
+      <item itemvalue="Python.CAAwidgets" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.widgetsBase" />
         <item itemvalue="Python.CAA" />
-        <item itemvalue="Python.mainFrame" />
+        <item itemvalue="Python.widgetsBase" />
+        <item itemvalue="Python.CAAwidgets" />
+        <item itemvalue="Python.widgetsMethodes" />
+        <item itemvalue="Python.widgetsAdd" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +232,7 @@
       <workItem from="1572197576963" duration="608000" />
       <workItem from="1572199018924" duration="6689000" />
       <workItem from="1572212633968" duration="4732000" />
-      <workItem from="1572292774608" duration="3394000" />
+      <workItem from="1572292774608" duration="7038000" />
     </task>
     <servers />
   </component>
@@ -205,9 +253,12 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$CAA.coverage" NAME="CAA Coverage Results" MODIFIED="1572215672632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$CAA.coverage" NAME="CAA Coverage Results" MODIFIED="1572300245203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$mainFrame.coverage" NAME="mainFrame Coverage Results" MODIFIED="1572215481864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$widgetsBase.coverage" NAME="widgetsBase Coverage Results" MODIFIED="1572296384834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MonApp" />
+    <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$widgetsAdd.coverage" NAME="widgetsAdd Coverage Results" MODIFIED="1572297994869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MonApp" />
+    <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$widgetsBase.coverage" NAME="widgetsBase Coverage Results" MODIFIED="1572299387570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MonApp" />
+    <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$widgetsMethodes.coverage" NAME="widgetsMethodes Coverage Results" MODIFIED="1572298451444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MonApp" />
+    <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$CAAwidgets.coverage" NAME="CAAwidgets Coverage Results" MODIFIED="1572298760205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$python.coverage" NAME="python Coverage Results" MODIFIED="1572202211553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
