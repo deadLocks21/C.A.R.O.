@@ -3,18 +3,18 @@
 
 from MonApp.MonApp import *
 
-APPLICATION_NAME = "CAA-createAnAlgorithm""CAA-createAnAlgorithm"
+APPLICATION_NAME = "CAA-createAnAlgorithm""CAA-createAnAlgorithm"  # Nom de l'application
 
 CANVAS_INFO = {'options': ('root', 'borderwidth', 'background', 'height')}
 
-root = Tk()
-w = getScreenWidth(root)
-h = getScreenHeight(root)
+root = Tk()  # Creation de la fenetre tkinter
+w = getScreenWidth(root)  # Stockage de la largeur de l'ecran
+h = getScreenHeight(root)  # Stockage de la hauteur de l'ecran
 
-setFullScreen(root)
-setRootName(root, APPLICATION_NAME)
+setFullScreen(root)  # Mettre l'application en plein ecran
+setRootName(root, APPLICATION_NAME)  # Renommer le nom de la fenetre
 
-Menu = createLayout(root, w, h)
-placeLayout(Menu, w, h)
+Menu = createLayout(root, w, h)  # Creation d'un canvas
+placeLayout(Menu, w, h)  # Placement de ce dernier
 
-startApp(root)
+startApp(root)  # Lancement de l'application

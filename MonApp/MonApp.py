@@ -3,27 +3,34 @@
 
 from tkinter import *
 
+
 def setFullScreen(r):
+    """Mettre une fenetre en plein écran"""
     r.attributes("-fullscreen", 1)
 
 
 def setRootName(r, nomF):
+    """Nommer une fenetre avec le parametre nomF"""
     r.title(nomF)
 
 
 def getScreenWidth(r):
+    """Retourner la largeur de l'ecran"""
     return r.winfo_screenwidth()
 
 
 def getScreenHeight(r):
+    """Retourner la hauteur de l'ecran"""
     return r.winfo_screenheight()
 
 
 def resizeScreen(r, x, y):
-    r.geometry("%s*%s+800+450" % (str(x), str(y)))
+    """Redimensionner la taille de la fenetre"""
+    r.geometry("%s*%s" % (str(x), str(y)))
 
 
 def startApp(r):
+    """Lancer l'application"""
     r.mainloop()
 
 
