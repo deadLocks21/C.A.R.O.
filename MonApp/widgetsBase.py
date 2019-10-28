@@ -43,6 +43,21 @@ CREATE TABLE IF NOT EXISTS button(
     );
 """)
 
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS label(
+    nomLabel VARCHAR(43) NOT NULL,
+    root VARCHAR(43) NOT NULL,
+    text TEXT DEFAULT '',
+    textvariable VARCHAR(43) DEFAULT 'None',
+    bg VARCHAR(43) DEFAULT '#AAAAAA',
+    font VARCHAR(43) DEFAULT 'myFont',
+    x INTEGER DEFAULT 0,
+    y INTEGER DEFAULT 0,
+    width INTEGER NOT NULL,
+    height INTEGER NOT NULL
+    );
+""")
+
 conn.commit()
 
 conn.close()
