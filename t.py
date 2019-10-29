@@ -1,4 +1,4 @@
-barreS_pil = Image.open('images/barreS.png')
-barreSR = (int(h * POURCENT_BT_CHOIX * 4), int(h * POURCENT_BT_CHOIX))
-barreS_img = ImageTk.PhotoImage(barreS_pil.resize(barreSR))
-programmeC.create_image((3*w)/4, h*0.05, image=barreS_img)
+role_text_pil = Image.open('images/text_role_text.png')
+role_textR = (int(h*POURCENT_FCT_T*3.41), int(h*POURCENT_FCT_T))
+role_text_img = ImageTk.PhotoImage(role_text_pil.resize(role_textR))
+role_textC.create_image(w*0.1016, h*0.191, image=role_text_img)

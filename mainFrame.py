@@ -9,6 +9,7 @@ APPLICATION_NAME = "CAA-CreateAnAlgorithm"
 POURCENT_BT = 0.035
 POURCENT_BT_CHOIX = 0.08
 POURCENT_BARRE = 0.8
+POURCENT_FCT_T = 0.0787
 
 # Variables
 quelMenu = "main"
@@ -33,6 +34,13 @@ main = Canvas(root, highlightthickness=0)
 fonctionC = Canvas(root, highlightthickness=0)
 procedureC = Canvas(root, highlightthickness=0)
 programmeC = Canvas(root, highlightthickness=0)
+
+
+def affImage(nomI, x, y, width, height):
+    image_pil = Image.open('images/%s.png' % nomI)
+    imageR = (width, height)
+    image_img = ImageTk.PhotoImage(image_pil.resize(imageR))
+    fonctionC.create_image(x, y, image=image_img)
 
 
 # Création du fond d'écran image
@@ -121,7 +129,6 @@ procedureC.create_image(w/2, h/2+h*0.05, image=barreS_img)
 programmeC.create_image(w/2, h/2+h*0.05, image=barreS_img)
 
 
-
 def reduireProg():
     root.state('iconic')
 
@@ -173,10 +180,28 @@ def oeilDeMoscou(event):
         quelMenu = "programme"
 
 
+fonction_text_pil = Image.open('images/text_fonction.png')
+fonction_textR = (int(h*POURCENT_FCT_T*3.41), int(h*POURCENT_FCT_T))
+fonction_text_img = ImageTk.PhotoImage(fonction_text_pil.resize(fonction_textR))
+fonctionC.create_image(w*0.1016, h*0.191, image=fonction_text_img)
+
+role_text_pil = Image.open('images/text_role.png')
+role_textR = (int(h*POURCENT_FCT_T*1.88), int(h*POURCENT_FCT_T))
+role_text_img = ImageTk.PhotoImage(role_text_pil.resize(role_textR))
+fonctionC.create_image(w*0.5833, h*0.191, image=role_text_img)
+
+nomFonctionEntry = Text(fonctionC)
+nomFonctionEntry.place(x=(w*0.1849), y=h*0.1574, width=int(w*0.296875), height=int(h*0.065))
+
+roleFonctionEntry = Text(fonctionC)
+roleFonctionEntry.place(x=(w*0.628), y=h*0.1574, width=int(w*0.3594), height=int(h*0.065))
+
 root.bind('<Button-1>', oeilDeMoscou)
 
 # Affichage du main
-main.place(x=0, y=0, width=w, height=h)
+fonctionC.place(x=0, y=0, width=w, height=h)
+
+
 
 # Lancement de l'application
 root.mainloop()
