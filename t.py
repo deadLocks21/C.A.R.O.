@@ -1,4 +1,4 @@
-fonctionS_pil = Image.open('images/fonctionSel.png')
-fonctionSR = (int(h * POURCENT_BT_CHOIX * 4), int(h * POURCENT_BT_CHOIX))
-fonctionS_img = ImageTk.PhotoImage(fonctionS_pil.resize(fonctionSR))
-fonctionC.create_image(w/4, h*0.05, image=fonctionS_img)
+barreS_pil = Image.open('images/barreS.png')
+barreSR = (int(h * POURCENT_BT_CHOIX * 4), int(h * POURCENT_BT_CHOIX))
+barreS_img = ImageTk.PhotoImage(barreS_pil.resize(barreSR))
+programmeC.create_image((3*w)/4, h*0.05, image=barreS_img)

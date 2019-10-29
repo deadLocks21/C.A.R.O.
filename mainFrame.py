@@ -8,6 +8,7 @@ from PIL import Image, ImageTk
 APPLICATION_NAME = "CAA-CreateAnAlgorithm"
 POURCENT_BT = 0.035
 POURCENT_BT_CHOIX = 0.08
+POURCENT_BARRE = 0.8
 
 # Variables
 quelMenu = "main"
@@ -110,6 +111,15 @@ programmeS_pil = Image.open('images/programmeSel.png')
 programmeSR = (int(h * POURCENT_BT_CHOIX * 4), int(h * POURCENT_BT_CHOIX))
 programmeS_img = ImageTk.PhotoImage(programmeS_pil.resize(programmeSR))
 programmeC.create_image((3*w)/4, h*0.05, image=programmeS_img)
+
+
+barreS_pil = Image.open('images/barreSep.png')
+barreSR = (int(h * POURCENT_BARRE * 0.03), int(h * POURCENT_BARRE))
+barreS_img = ImageTk.PhotoImage(barreS_pil.resize(barreSR))
+fonctionC.create_image(w/2, h/2+h*0.05, image=barreS_img)
+procedureC.create_image(w/2, h/2+h*0.05, image=barreS_img)
+programmeC.create_image(w/2, h/2+h*0.05, image=barreS_img)
+
 
 
 def reduireProg():
