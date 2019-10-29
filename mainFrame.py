@@ -120,6 +120,27 @@ def fermerProg():
     root.quit()
 
 
+def affCanvasFonction():
+    fonctionC.place(x=0, y=0, width=w, height=h)
+    procedureC.place_forget()
+    programmeC.place_forget()
+    main.place_forget()
+
+
+def affCanvasProcedure():
+    fonctionC.place_forget()
+    procedureC.place(x=0, y=0, width=w, height=h)
+    programmeC.place_forget()
+    main.place_forget()
+
+
+def affCanvasProgramme():
+    fonctionC.place_forget()
+    procedureC.place_forget()
+    programmeC.place(x=0, y=0, width=w, height=h)
+    main.place_forget()
+
+
 def oeilDeMoscou(event):
     print(event.x, "x", event.y)
 
@@ -128,6 +149,18 @@ def oeilDeMoscou(event):
 
     if (w - fermerR[0]) < event.x < w and 0 < event.y < reduireR[1]:
         fermerProg()
+
+    if (w/4 - fonctionR[0]/2 < event.x < w/4 + fonctionR[0]/2) and (h*0.05)-(fonctionR[1]/2) < event.y < (h*0.05)+(fonctionR[1]/2) :
+        affCanvasFonction()
+        quelMenu = "fonction"
+
+    if (w/2 - procedureR[0]/2 < event.x < w/2 + procedureR[0]/2) and (h*0.05)-(procedureR[1]/2) < event.y < (h*0.05)+(procedureR[1]/2) :
+        affCanvasProcedure()
+        quelMenu = "procedure"
+
+    if ((3*w)/4 - programmeR[0]/2 < event.x < (3*w)/4 + programmeR[0]/2) and (h*0.05)-(programmeR[1]/2) < event.y < (h*0.05)+(programmeR[1]/2) :
+        affCanvasProgramme()
+        quelMenu = "programme"
 
 
 root.bind('<Button-1>', oeilDeMoscou)
