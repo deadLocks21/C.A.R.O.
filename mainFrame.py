@@ -5,6 +5,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 
 APPLICATION_NAME = "CAA-CreateAnAlgorithm"
+POURCENT_BT = 0.035
 
 # Création de la fenêtre principale
 root = Tk()
@@ -27,12 +28,12 @@ fond_img = ImageTk.PhotoImage(fond_pil.resize(fond_resolution))
 fond = main.create_image(w / 2, h / 2, image=fond_img)
 
 fermer_pil = Image.open('images/fermer.png')
-fermerR = (int(h * 0.03 * 1.5), int(h * 0.03))
+fermerR = (int(h * POURCENT_BT * 1.5), int(h * POURCENT_BT))
 fermer_img = ImageTk.PhotoImage(fermer_pil.resize(fermerR))
 main.create_image(w - (fermerR[0] / 2), 0 + (fermerR[1] / 2), image=fermer_img)
 
 reduire_pil = Image.open('images/reduire.png')
-reduireR = (int(h * 0.03 * 1.5), int(h * 0.03))
+reduireR = (int(h * POURCENT_BT * 1.5), int(h * POURCENT_BT))
 reduire_img = ImageTk.PhotoImage(reduire_pil.resize(reduireR))
 main.create_image(w - (reduireR[0] / 2) * 3, 0 + (reduireR[1] / 2), image=reduire_img)
 
