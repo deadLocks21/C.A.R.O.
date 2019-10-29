@@ -16,8 +16,9 @@ h = getScreenHeight(root)  # Stockage de la hauteur de l'ecran
 setFullScreen(root)  # Mettre l'application en plein ecran
 setRootName(root, APPLICATION_NAME)  # Renommer le nom de la fenetre
 
-Menu = createCanvas(selectCanvasByName("main"), root)
-placeCanvas(selectCanvasByName("main"), Menu, w, h)
+main = CPcanvas("main", root)  # Création et affichage du canvas main
+
+bt2 = CPbutton("bt1", root)
 
 
 startApp(root)  # Lancement de l'application

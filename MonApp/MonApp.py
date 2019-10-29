@@ -10,6 +10,7 @@ def createRoot():
     print("[TK] Création de la fenetre")
     return Tk()
 
+
 def setFullScreen(r):
     """Mettre une fenetre en plein écran"""
     r.attributes("-fullscreen", 1)
@@ -72,3 +73,48 @@ def placeCanvas(info, canvas, w, h):
 
     canvas.place(x=x, y=y, width=w, height=h)  # Placement du canvas
     print("[TK] Placement du canvas %s en x=%i et y= %i" % (nomCanvas, x, y))
+
+
+def createButton(info, r):
+    """Creer et retourne un bouton a partir d'une ligne de la BDD"""
+    # Selectionner les info de la recherche
+    info = dernierResultat(info)
+
+    # Transformer les infos en variables
+    (nomButton, root, text, textvariable, relief, bg, fg, font, image, borderwidth, x, y, width, height, command) = info
+
+    # Creer le canvas
+    b = Button(r, text=text, textvariable=textvariable, relief=relief, bg=bg, fg=fg, font=font, image=image, borderwidth=borderwidth, width=width, height=height, command=command)
+
+    print("[TK] Création du bouton %s" % nomButton)
+    return b  # Retourner le canvas
+
+
+def placeButton(info, b):
+    """Place un bouton a partir d'une ligne de la BDD"""
+    # Selectionner les info de la recherche
+    info = dernierResultat(info)
+
+    # Transformer les infos en variables
+    (nomButton, root, text, textvariable, relief, bg, fg, font, image, borderwidth, x, y, width, height, command) = info
+
+    b.place(x=x, y=y)  # Placement du canvas
+    print("[TK] Placement du canvas %s en x=%i et y= %i" % (nomButton, x, y))
+
+
+def CPcanvas(nC, r):
+    """Méthode qui permet de créer et afficher un canvas"""
+    c = createCanvas(selectItemByName(nC, "canvas"), r)
+    placeCanvas(selectItemByName(nC, "canvas"), c, getScreenWidth(r), getScreenHeight(r))
+
+    print("[TK] Création et affichage du canvas %s" % nC)
+    return c
+
+
+def CPbutton(nB, r):
+    """Méthode qui permet de créer et afficher un canvas"""
+    b = createButton(selectItemByName(nB, "button"), r)
+    placeButton(selectItemByName(nB, "button"), b)
+
+    print("[TK] Création et affichage du bouton %s" % nB)
+    return b

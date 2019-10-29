@@ -18,7 +18,7 @@ print("[DATABASE] Insertion des canvas dans la base de donnée")
 
 # Button
 try:
-    cursor.execute("""INSERT INTO button (nomButton, root, height, width) VALUES ('bt1', 'root', 0, 0);""")
+    cursor.execute("""INSERT INTO button (nomButton, root, width, height) VALUES ('bt2', 'root', 1000, 1000);""")
 
 except sqlite3.IntegrityError:  # Erreur qui apparait en cas de doublon
     pass
