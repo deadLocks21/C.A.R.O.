@@ -4,7 +4,7 @@
 from MonApp.MonApp import *
 import sqlite3
 
-APPLICATION_NAME = "CAA-createAnAlgorithm""CAA-createAnAlgorithm"  # Nom de l'application
+APPLICATION_NAME = "CAA-createAnAlgorithm"  # Nom de l'application
 conn = sqlite3.connect('widgets.db')
 cursor = conn.cursor()
 
@@ -16,9 +16,9 @@ h = getScreenHeight(root)  # Stockage de la hauteur de l'ecran
 setFullScreen(root)  # Mettre l'application en plein ecran
 setRootName(root, APPLICATION_NAME)  # Renommer le nom de la fenetre
 
-main = CPcanvas("main", root)  # Création et affichage du canvas main
+# main = CPcanvas("main", root)  # Création et affichage du canvas main
 
-bt2 = CPbutton("bt1", root)
+bt6 = CPbutton("bt", root)
 
 
 startApp(root)  # Lancement de l'application

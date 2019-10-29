@@ -10,19 +10,19 @@ cursor = conn.cursor()
 # Canvas
 try:
     cursor.execute("""INSERT INTO canvas (nomCanvas, root, height, width, background) VALUES ('main', 'root', 0, 0, '#CC33FF');""")
+    print("[DATABASE] Insertion des canvas dans la base de donnée")
 
 except sqlite3.IntegrityError:  # Erreur qui apparait en cas de doublon
     pass
-print("[DATABASE] Insertion des canvas dans la base de donnée")
 
 
 # Button
 try:
-    cursor.execute("""INSERT INTO button (nomButton, root, width, height) VALUES ('bt2', 'root', 1000, 1000);""")
+    cursor.execute("""INSERT INTO button (nomButton, root, text) VALUES ('bt', 'root', 'Salut');""")
+    print("[DATABASE] Insertion des boutons dans la base de donnée")
 
 except sqlite3.IntegrityError:  # Erreur qui apparait en cas de doublon
     pass
-print("[DATABASE] Insertion des boutons dans la base de donnée")
 
 conn.commit()
 

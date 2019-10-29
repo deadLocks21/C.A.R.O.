@@ -6,6 +6,7 @@ import sqlite3
 conn = sqlite3.connect('widgets.db')
 cursor = conn.cursor()
 
+
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS canvas(
      nomCanvas VARCHAR(43) UNIQUE NOT NULL,
@@ -38,8 +39,8 @@ CREATE TABLE IF NOT EXISTS button(
     borderwidth INTEGER DEFAULT 2,
     x INTEGER DEFAULT 0,
      y INTEGER DEFAULT 0,
-    width INTEGER NOT NULL,
-    height INTEGER NOT NULL,
+    width INTEGER,
+    height INTEGER,
     command VARCHAR(43) DEFAULT NULL
     );
 """)
@@ -55,8 +56,8 @@ CREATE TABLE IF NOT EXISTS label(
     font VARCHAR(43) DEFAULT 'myFont',
     x INTEGER DEFAULT 0,
     y INTEGER DEFAULT 0,
-    width INTEGER NOT NULL,
-    height INTEGER NOT NULL
+    width INTEGER,
+    height INTEGER
     );
 """)
 print("[DATABASE] Création de la table label.")
