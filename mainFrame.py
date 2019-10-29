@@ -4,38 +4,112 @@
 from tkinter import *
 from PIL import Image, ImageTk
 
+# Constantes
 APPLICATION_NAME = "CAA-CreateAnAlgorithm"
 POURCENT_BT = 0.035
+POURCENT_BT_CHOIX = 0.08
+
+# Variables
+quelMenu = "main"
+
 
 # Création de la fenêtre principale
 root = Tk()
+
 
 # Mise en plein écran et renommage de root
 root.attributes("-fullscreen", 1)
 root.title(APPLICATION_NAME)
 
+
 # Largeur et hauteur de l'écran
 w = root.winfo_screenwidth()
 h = root.winfo_screenheight()
 
+
 # Canvas contenant les éléments visuels de l'application
 main = Canvas(root, highlightthickness=0)
+fonctionC = Canvas(root, highlightthickness=0)
+procedureC = Canvas(root, highlightthickness=0)
+programmeC = Canvas(root, highlightthickness=0)
+
 
 # Création du fond d'écran image
 fond_pil = Image.open('images/fond.png')
 fond_resolution = (w, h)
 fond_img = ImageTk.PhotoImage(fond_pil.resize(fond_resolution))
 fond = main.create_image(w / 2, h / 2, image=fond_img)
+fonctionC.create_image(w / 2, h / 2, image=fond_img)
+procedureC.create_image(w / 2, h / 2, image=fond_img)
+programmeC.create_image(w / 2, h / 2, image=fond_img)
 
+
+# Bouton fermer
 fermer_pil = Image.open('images/fermer.png')
 fermerR = (int(h * POURCENT_BT * 1.5), int(h * POURCENT_BT))
 fermer_img = ImageTk.PhotoImage(fermer_pil.resize(fermerR))
 main.create_image(w - (fermerR[0] / 2), 0 + (fermerR[1] / 2), image=fermer_img)
+fonctionC.create_image(w - (fermerR[0] / 2), 0 + (fermerR[1] / 2), image=fermer_img)
+procedureC.create_image(w - (fermerR[0] / 2), 0 + (fermerR[1] / 2), image=fermer_img)
+programmeC.create_image(w - (fermerR[0] / 2), 0 + (fermerR[1] / 2), image=fermer_img)
 
+
+# Bouton reduire
 reduire_pil = Image.open('images/reduire.png')
 reduireR = (int(h * POURCENT_BT * 1.5), int(h * POURCENT_BT))
 reduire_img = ImageTk.PhotoImage(reduire_pil.resize(reduireR))
 main.create_image(w - (reduireR[0] / 2) * 3, 0 + (reduireR[1] / 2), image=reduire_img)
+fonctionC.create_image(w - (reduireR[0] / 2) * 3, 0 + (reduireR[1] / 2), image=reduire_img)
+procedureC.create_image(w - (reduireR[0] / 2) * 3, 0 + (reduireR[1] / 2), image=reduire_img)
+programmeC.create_image(w - (reduireR[0] / 2) * 3, 0 + (reduireR[1] / 2), image=reduire_img)
+
+
+# Bouton fonction
+fonction_pil = Image.open('images/fonction.png')
+fonctionR = (int(h * POURCENT_BT_CHOIX * 4), int(h * POURCENT_BT_CHOIX))
+fonction_img = ImageTk.PhotoImage(fonction_pil.resize(fonctionR))
+main.create_image(w/4, h*0.05, image=fonction_img)
+procedureC.create_image(w/4, h*0.05, image=fonction_img)
+programmeC.create_image(w/4, h*0.05, image=fonction_img)
+
+
+# Bouton procedure
+procedure_pil = Image.open('images/procedure.png')
+procedureR = (int(h * POURCENT_BT_CHOIX * 4), int(h * POURCENT_BT_CHOIX))
+procedure_img = ImageTk.PhotoImage(procedure_pil.resize(procedureR))
+main.create_image(w/2, h*0.05, image=procedure_img)
+fonctionC.create_image(w/2, h*0.05, image=procedure_img)
+programmeC.create_image(w/2, h*0.05, image=procedure_img)
+
+
+# Bouton programme
+programme_pil = Image.open('images/programme.png')
+programmeR = (int(h * POURCENT_BT_CHOIX * 4), int(h * POURCENT_BT_CHOIX))
+programme_img = ImageTk.PhotoImage(programme_pil.resize(programmeR))
+main.create_image((3*w)/4, h*0.05, image=programme_img)
+fonctionC.create_image((3*w)/4, h*0.05, image=programme_img)
+procedureC.create_image((3*w)/4, h*0.05, image=programme_img)
+
+
+# Création du bouton selectionné
+fonctionS_pil = Image.open('images/fonctionSel.png')
+fonctionSR = (int(h * POURCENT_BT_CHOIX * 4), int(h * POURCENT_BT_CHOIX))
+fonctionS_img = ImageTk.PhotoImage(fonctionS_pil.resize(fonctionSR))
+fonctionC.create_image(w/4, h*0.05, image=fonctionS_img)
+
+
+# Création du bouton selectionné
+procedureS_pil = Image.open('images/procedureSel.png')
+procedureSR = (int(h * POURCENT_BT_CHOIX * 4), int(h * POURCENT_BT_CHOIX))
+procedureS_img = ImageTk.PhotoImage(procedureS_pil.resize(procedureSR))
+procedureC.create_image(w/2, h*0.05, image=procedureS_img)
+
+
+# Création du bouton selectionné
+programmeS_pil = Image.open('images/programmeSel.png')
+programmeSR = (int(h * POURCENT_BT_CHOIX * 4), int(h * POURCENT_BT_CHOIX))
+programmeS_img = ImageTk.PhotoImage(programmeS_pil.resize(programmeSR))
+programmeC.create_image((3*w)/4, h*0.05, image=programmeS_img)
 
 
 def reduireProg():
