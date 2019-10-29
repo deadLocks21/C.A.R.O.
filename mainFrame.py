@@ -4,37 +4,48 @@
 from tkinter import *
 from PIL import Image, ImageTk
 
-APPLICATION_NAME="CAA-CreateAnAlgorithm"
-
+APPLICATION_NAME = "CAA-CreateAnAlgorithm"
 
 # Création de la fenêtre principale
 root = Tk()
-
 
 # Mise en plein écran et renommage de root
 root.attributes("-fullscreen", 1)
 root.title(APPLICATION_NAME)
 
-
 # Largeur et hauteur de l'écran
 w = root.winfo_screenwidth()
 h = root.winfo_screenheight()
 
-
 # Canvas contenant les éléments visuels de l'application
 main = Canvas(root, highlightthickness=0)
 
-
 # Création du fond d'écran image
-photo = Image.open('images/fond.png')
-resolution = (w, h)
-img = ImageTk.PhotoImage(photo.resize(resolution))
-fond = main.create_image(w/2, h/2, image=img)
+fond_pil = Image.open('images/fond.png')
+fond_resolution = (w, h)
+fond_img = ImageTk.PhotoImage(fond_pil.resize(fond_resolution))
+fond = main.create_image(w / 2, h / 2, image=fond_img)
 
+fermer_pil = Image.open('images/fermer.png')
+fermerR = (int(h * 0.03 * 1.5), int(h * 0.03))
+fermer_img = ImageTk.PhotoImage(fermer_pil.resize(fermerR))
+main.create_image(w - (fermerR[0] / 2), 0 + (fermerR[1] / 2), image=fermer_img)
+
+reduire_pil = Image.open('images/reduire.png')
+reduireR = (int(h * 0.03 * 1.5), int(h * 0.03))
+reduire_img = ImageTk.PhotoImage(reduire_pil.resize(reduireR))
+main.create_image(w - (reduireR[0] / 2) * 3, 0 + (reduireR[1] / 2), image=reduire_img)
+
+
+def reduireProg(event):
+    if (w - fermerR[0] - reduireR[0]) < event.x < (w - fermerR[0]) and 0 < event.y < reduireR[1]:
+        root.state('iconic')
+
+
+root.bind('<Button-1>', reduireProg)
 
 # Affichage du main
 main.place(x=0, y=0, width=w, height=h)
-
 
 # Lancement de l'application
 root.mainloop()
