@@ -9,7 +9,7 @@ cursor = conn.cursor()
 
 # Canvas
 try:
-    cursor.execute("""INSERT INTO canvas (nomCanvas, root, height, width, background) VALUES ('main', 'root', 0, 0, '#CC33FF');""")
+    # cursor.execute("""INSERT INTO canvas (nomCanvas, root, height, width, background) VALUES ('main', 'root', 0, 0, '#CC33FF');""")
     print("[DATABASE] Insertion des canvas dans la base de donnée")
 
 except sqlite3.IntegrityError:  # Erreur qui apparait en cas de doublon
@@ -18,8 +18,17 @@ except sqlite3.IntegrityError:  # Erreur qui apparait en cas de doublon
 
 # Button
 try:
-    cursor.execute("""INSERT INTO button (nomButton, root, text) VALUES ('bt', 'root', 'Salut');""")
+    # cursor.execute("""INSERT INTO button (nomButton, root, text) VALUES ('bt', 'root', 'Salut');""")
     print("[DATABASE] Insertion des boutons dans la base de donnée")
+
+except sqlite3.IntegrityError:  # Erreur qui apparait en cas de doublon
+    pass
+
+
+# Label
+try:
+    # cursor.execute("""INSERT INTO label (nomLabel, root, text) VALUES ('lb1', 'root', 'Salut');""")
+    print("[DATABASE] Insertion des labels dans la base de donnée")
 
 except sqlite3.IntegrityError:  # Erreur qui apparait en cas de doublon
     pass

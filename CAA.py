@@ -18,7 +18,8 @@ setRootName(root, APPLICATION_NAME)  # Renommer le nom de la fenetre
 
 # main = CPcanvas("main", root)  # Création et affichage du canvas main
 
-bt6 = CPbutton("bt", root)
+# bt6 = CPbutton("bt", root)
+lb1 = CPlabel("lb1", root)
 
 
 startApp(root)  # Lancement de l'application

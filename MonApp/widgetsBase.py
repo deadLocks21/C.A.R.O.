@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS canvas(
      nomCanvas VARCHAR(43) UNIQUE NOT NULL,
      root VARCHAR(43) NOT NULL,
      borderwidth INTEGER DEFAULT 2,
-     background VARCHAR(43) DEFAULT '#E4E4E4',
+     background VARCHAR(43),
      height INTEGER NOT NULL,
      highlightbackground VARCHAR(43) DEFAULT NULL,
      highlightcolor VARCHAR(43) DEFAULT NULL,

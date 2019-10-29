@@ -63,7 +63,7 @@ def createCanvas(info, r):
 
 
 def placeCanvas(info, canvas, w, h):
-    """Place un canvas a partir d'une ligne de la BDD"""
+    """Place un canvas a partir des paramètres"""
     # Selectionner les info de la recherche
     info = dernierResultat(info)
 
@@ -93,7 +93,7 @@ def createButton(info, r):
 
 
 def placeButton(info, b):
-    """Place un bouton a partir d'une ligne de la BDD"""
+    """Place un bouton a partir des paramètres"""
     # Selectionner les info de la recherche
     info = dernierResultat(info)
 
@@ -101,10 +101,10 @@ def placeButton(info, b):
     (nomButton, root, text, textvariable, relief, bg, fg, font, image, borderwidth, x, y, width, height, command) = info
 
     b.place(x=x, y=y)  # Placement du canvas
-    print("[TK] Placement du canvas %s en x=%i et y= %i" % (nomButton, x, y))
+    print("[TK] Placement du bouton %s en x=%i et y= %i" % (nomButton, x, y))
 
 
-def createLb(info, r):
+def createLabel(info, r):
     """Creer et retourne un label a partir d'une ligne de la BDD"""
     # Selectionner les info de la recherche
     info = dernierResultat(info)
@@ -112,7 +112,22 @@ def createLb(info, r):
     # Transformer les infos en variables
     (nomLabel, root, text, textvariable, bg, font, x, y, width, height) = info
 
-    l = Label(r, text, textvariable, bg, font)
+    l = Label(r, text=text, textvariable=textvariable, bg=bg, font=font)
+
+    print("[TK] Création du label %s" % nomLabel)
+    return l
+
+
+def placeLabel(info, l):
+    """Afficher un label a partir des parametres"""
+    # Selectionner les info de la recherche
+    info = dernierResultat(info)
+
+    # Transformer les infos en variables
+    (nomLabel, root, text, textvariable, bg, font, x, y, width, height) = info
+
+    l.place(x=x, y=y)
+    print("[TK] Placement du label %s en x=%i et y= %i" % (nomLabel, x, y))
 
 
 def CPcanvas(nC, r):
@@ -125,11 +140,20 @@ def CPcanvas(nC, r):
 
 
 def CPbutton(nB, r):
-    """Méthode qui permet de créer et afficher un canvas"""
+    """Méthode qui permet de créer et afficher un bouton"""
     b = createButton(selectItemByName(nB, "button"), r)
     placeButton(selectItemByName(nB, "button"), b)
 
     print("[TK] Création et affichage du bouton %s" % nB)
     return b
+
+
+def CPlabel(nL, r):
+    """Méthode qui permet de créer et afficher un label"""
+    l = createLabel(selectItemByName(nL, "label"), r)
+    placeLabel(selectItemByName(nL, "label"), l)
+
+    print("[TK] Création et affichage du bouton %s" % nL)
+    return l
 
 
