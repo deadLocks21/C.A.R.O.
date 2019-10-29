@@ -9,7 +9,7 @@ conn = sqlite3.connect('widgets.db')
 cursor = conn.cursor()
 
 
-root = Tk()  # Creation de la fenetre tkinter
+root = createRoot()  # Creation de la fenetre tkinter
 w = getScreenWidth(root)  # Stockage de la largeur de l'ecran
 h = getScreenHeight(root)  # Stockage de la hauteur de l'ecran
 

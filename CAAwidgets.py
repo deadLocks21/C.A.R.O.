@@ -6,11 +6,23 @@ import sqlite3
 conn = sqlite3.connect('widgets.db')
 cursor = conn.cursor()
 
+
+# Canvas
 try:
-    cursor.execute("""INSERT INTO canvas (nomCanvas, root, height, width, background) 
-VALUES ('main', 'root', 0, 0, '#CC33FF');""")
+    cursor.execute("""INSERT INTO canvas (nomCanvas, root, height, width, background) VALUES ('main', 'root', 0, 0, '#CC33FF');""")
+
 except sqlite3.IntegrityError:  # Erreur qui apparait en cas de doublon
     pass
+print("[DATABASE] Insertion des canvas dans la base de donnée")
+
+
+# Button
+try:
+    cursor.execute("""INSERT INTO button (nomButton, root, height, width) VALUES ('bt1', 'root', 0, 0);""")
+
+except sqlite3.IntegrityError:  # Erreur qui apparait en cas de doublon
+    pass
+print("[DATABASE] Insertion des boutons dans la base de donnée")
 
 conn.commit()
 

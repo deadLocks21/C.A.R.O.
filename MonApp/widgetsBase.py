@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS canvas(
      y INTEGER DEFAULT 0
 );
 """)
+print("[DATABASE] Création de la table canvas.")
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS button(
@@ -42,13 +43,14 @@ CREATE TABLE IF NOT EXISTS button(
     command VARCHAR(43) DEFAULT NULL
     );
 """)
+print("[DATABASE] Création de la table button.")
 
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS label(
-    nomLabel VARCHAR(43) NOT NULL,
+    nomLabel VARCHAR(43) UNIQUE NOT NULL,
     root VARCHAR(43) NOT NULL,
-    text TEXT DEFAULT '',
-    textvariable VARCHAR(43) DEFAULT 'None',
+    text TEXT DEFAULT NULL,
+    textvariable VARCHAR(43) DEFAULT NULL,
     bg VARCHAR(43) DEFAULT '#AAAAAA',
     font VARCHAR(43) DEFAULT 'myFont',
     x INTEGER DEFAULT 0,
@@ -57,6 +59,7 @@ CREATE TABLE IF NOT EXISTS label(
     height INTEGER NOT NULL
     );
 """)
+print("[DATABASE] Création de la table label.")
 
 conn.commit()
 
