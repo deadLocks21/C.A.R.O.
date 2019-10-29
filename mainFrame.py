@@ -37,12 +37,25 @@ reduire_img = ImageTk.PhotoImage(reduire_pil.resize(reduireR))
 main.create_image(w - (reduireR[0] / 2) * 3, 0 + (reduireR[1] / 2), image=reduire_img)
 
 
-def reduireProg(event):
+def reduireProg():
+    root.state('iconic')
+
+
+def fermerProg():
+    root.quit()
+
+
+def oeilDeMoscou(event):
+    print(event.x, "x", event.y)
+
     if (w - fermerR[0] - reduireR[0]) < event.x < (w - fermerR[0]) and 0 < event.y < reduireR[1]:
-        root.state('iconic')
+        reduireProg()
+
+    if (w - fermerR[0]) < event.x < w and 0 < event.y < reduireR[1]:
+        fermerProg()
 
 
-root.bind('<Button-1>', reduireProg)
+root.bind('<Button-1>', oeilDeMoscou)
 
 # Affichage du main
 main.place(x=0, y=0, width=w, height=h)
