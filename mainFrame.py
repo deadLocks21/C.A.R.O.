@@ -196,11 +196,45 @@ nomFonctionEntry.place(x=(w*0.1849), y=h*0.1574, width=int(w*0.296875), height=i
 roleFonctionEntry = Text(fonctionC)
 roleFonctionEntry.place(x=(w*0.628), y=h*0.1574, width=int(w*0.3594), height=int(h*0.065))
 
+glossaire_text_pil = Image.open('images/text_glossaire.png')
+glossaire_textR = (int(h*POURCENT_FCT_T*3.294), int(h*POURCENT_FCT_T))
+glossaire_text_img = ImageTk.PhotoImage(glossaire_text_pil.resize(glossaire_textR))
+fonctionC.create_image(w/4, h*0.28, image=glossaire_text_img)
+
+algorithme_text_pil = Image.open('images/text_algorithme.png')
+algorithme_textR = (int(h*POURCENT_FCT_T*3.294), int(h*POURCENT_FCT_T))
+algorithme_text_img = ImageTk.PhotoImage(algorithme_text_pil.resize(algorithme_textR))
+fonctionC.create_image(3*w/4, h*0.28, image=algorithme_text_img)
+
+paramEntree_text_pil = Image.open('images/text_paramEntree.png')
+paramEntree_textR = (int(h*POURCENT_FCT_T*7.941), int(h*POURCENT_FCT_T))
+paramEntree_text_img = ImageTk.PhotoImage(paramEntree_text_pil.resize(paramEntree_textR))
+fonctionC.create_image(w*0.202, h*0.3727, image=paramEntree_text_img)
+
+nomParamEEntry = Text(fonctionC)
+nomParamEEntry.place(x=(w*0.026), y=h*0.4167, width=int(w*0.4375), height=int(h*0.2037))
+
+typeValR_text_pil = Image.open('images/text_typeValR.png')
+typeValR_textR = (int(h*POURCENT_FCT_T*6.823), int(h*POURCENT_FCT_T))
+typeValR_text_img = ImageTk.PhotoImage(typeValR_text_pil.resize(typeValR_textR))
+fonctionC.create_image(w*0.177, h*0.6644, image=typeValR_text_img)
+
+nomTypeValREntry = Text(fonctionC)
+nomTypeValREntry.place(x=(w*0.3333), y=h*0.6389, width=int(w*0.1302), height=int(h*0.0601))
+
+varEtConst_text_pil = Image.open('images/text_varEtConst.png')
+varEtConst_textR = (int(h*POURCENT_FCT_T*8.529), int(h*POURCENT_FCT_T))
+varEtConst_text_img = ImageTk.PhotoImage(varEtConst_text_pil.resize(varEtConst_textR))
+fonctionC.create_image(w*0.215, h*0.7477, image=varEtConst_text_img)
+
+nomVarEtConstEntry = Text(fonctionC)
+nomVarEtConstEntry.place(x=(w*0.026), y=h*0.7917, width=int(w*0.4375), height=int(h*0.2037))
+
 root.bind('<Button-1>', oeilDeMoscou)
 
 # Affichage du main
 fonctionC.place(x=0, y=0, width=w, height=h)
-
+# main.place(x=0, y=0, width=w, height=h)
 
 
 # Lancement de l'application
