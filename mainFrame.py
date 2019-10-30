@@ -230,6 +230,35 @@ fonctionC.create_image(w*0.215, h*0.7477, image=varEtConst_text_img)
 nomVarEtConstEntry = Text(fonctionC)
 nomVarEtConstEntry.place(x=(w*0.026), y=h*0.7917, width=int(w*0.4375), height=int(h*0.2037))
 
+jeuxEssais_text_pil = Image.open('images/text_jeuxEssais.png')
+jeuxEssais_textR = (int(h*POURCENT_FCT_T*5.294), int(h*POURCENT_FCT_T))
+jeuxEssais_text_img = ImageTk.PhotoImage(jeuxEssais_text_pil.resize(jeuxEssais_textR))
+fonctionC.create_image(w*0.75, h*0.3727, image=jeuxEssais_text_img)
+
+nomJeuxEssaisEntry = Text(fonctionC)
+nomJeuxEssaisEntry.place(x=(w*0.5417), y=h*0.4167, width=int(w*0.4167), height=int(h*0.0926))
+
+principe_text_pil = Image.open('images/text_principe.png')
+principe_textR = (int(h*POURCENT_FCT_T*3.177), int(h*POURCENT_FCT_T))
+principe_text_img = ImageTk.PhotoImage(principe_text_pil.resize(principe_textR))
+fonctionC.create_image(w*0.75, h*0.5579, image=principe_text_img)
+
+nomPrincipeEntry = Text(fonctionC)
+nomPrincipeEntry.place(x=(w*0.5417), y=h*0.6019, width=int(w*0.4167), height=int(h*0.0926))
+
+valJE_text_pil = Image.open('images/text_valJE.png')
+valJE_textR = (int(h*POURCENT_FCT_T*10.294), int(h*POURCENT_FCT_T))
+valJE_text_img = ImageTk.PhotoImage(valJE_text_pil.resize(valJE_textR))
+fonctionC.create_image(w*0.75, h*0.743, image=valJE_text_img)
+
+nomValJEEntry = Text(fonctionC)
+nomValJEEntry.place(x=(w*0.5417), y=h*0.787, width=int(w*0.4167), height=int(h*0.0926))
+
+boutonGen_pil = Image.open('images/boutonGen.png')
+boutonGenR = (int(h*POURCENT_FCT_T*6.7765), int(h*POURCENT_FCT_T))
+boutonGen_img = ImageTk.PhotoImage(boutonGen_pil.resize(boutonGenR))
+fonctionC.create_image(w*0.75, h*0.9421, image=boutonGen_img)
+
 root.bind('<Button-1>', oeilDeMoscou)
 
 # Affichage du main
