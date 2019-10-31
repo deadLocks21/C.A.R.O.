@@ -1,1 +1,0 @@
-CARO = Créateur d'Algorithmes Relativement Originaux

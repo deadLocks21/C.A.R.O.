@@ -15,7 +15,7 @@ def printLogTkinter(s):
 
 
 # Constantes
-APPLICATION_NAME = "CAA-CreateAnAlgorithm"
+APPLICATION_NAME = "C.A.R.O."
 POURCENT_BT = 0.035
 POURCENT_BT_CHOIX = 0.08
 POURCENT_BARRE = 0.8
@@ -391,3 +391,5 @@ main.place(x=0, y=0, width=w, height=h)
 
 # Lancement de l'application
 root.mainloop()
+
+"""Je m'appelle C.A.R.O. et je suis un Créateur d'Algorithmes Relativement Original."""
