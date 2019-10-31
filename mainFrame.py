@@ -212,7 +212,15 @@ def oeilDeMoscou(event):
             printLogTkinter("Enregistrement du fichier %s.html dans le repertoire %s." % (str(nomProcedureEntry.get(1.0, 'end')).replace("\n", ""), CHEMIN_ENREGISTREMENT))
 
         if quelMenu == "programme":
-            genProg()
+            nom = str(nomProgrammeEntry.get(1.0, 'end')).replace("\n", "")
+            role = str(roleProgrammeEntry.get(1.0, 'end')).replace("\n", "")
+            donnee = str(donneeProgrammeEntry.get(1.0, 'end'))
+            res = str(resProgrammeEntry.get(1.0, 'end'))
+            varConst = str(varEtConstProgrammeEntry.get(1.0, 'end'))
+            jEF = str(jeuxEssaisProgrammeEntry.get(1.0, 'end'))
+            principe = str(principeProgrammeEntry.get(1.0, 'end')).replace("\n", "")
+            vJE = str(valJEProgrammeEntry.get(1.0, 'end'))
+            genProg(nom, role, donnee, res, varConst, jEF, principe, vJE, CHEMIN_ENREGISTREMENT)
             printLogTkinter("Enregistrement du fichier %s.html dans le repertoire %s." % (str(nomProgrammeEntry.get(1.0, 'end')).replace("\n", ""), CHEMIN_ENREGISTREMENT))
 
 
