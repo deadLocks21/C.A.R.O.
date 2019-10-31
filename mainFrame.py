@@ -136,28 +136,30 @@ def fermerProg():
 
 
 def affCanvasFonction():
-    fonctionC.place(x=0, y=0, width=w, height=h)
     procedureC.place_forget()
     programmeC.place_forget()
     main.place_forget()
+    fonctionC.place(x=0, y=0, width=w, height=h)
 
 
 def affCanvasProcedure():
     fonctionC.place_forget()
-    procedureC.place(x=0, y=0, width=w, height=h)
     programmeC.place_forget()
     main.place_forget()
+    procedureC.place(x=0, y=0, width=w, height=h)
 
 
 def affCanvasProgramme():
     fonctionC.place_forget()
     procedureC.place_forget()
-    programmeC.place(x=0, y=0, width=w, height=h)
     main.place_forget()
+    programmeC.place(x=0, y=0, width=w, height=h)
 
 
 def oeilDeMoscou(event):
     global quelMenu
+
+    print(event.x, "x", event.y)
 
     if (w - fermerR[0] - reduireR[0]) < event.x < (w - fermerR[0]) and 0 < event.y < reduireR[1]:
         reduireProg()
@@ -378,6 +380,8 @@ procedureC.create_image(w * 0.75, h * 0.9421, image=boutonGen_img)
 programmeC.create_image(w * 0.75, h * 0.9421, image=boutonGen_img)
 
 root.bind('<Button-1>', oeilDeMoscou)
+
+main.create_rectangle(w / 4 - fonctionR[0] / 2, (h * 0.05) - (fonctionR[1] / 2), w / 4 + fonctionR[0] / 2, (h * 0.05) + (fonctionR[1] / 2), fill    ='#000000')
 
 # Affichage du main
 main.place(x=0, y=0, width=w, height=h)

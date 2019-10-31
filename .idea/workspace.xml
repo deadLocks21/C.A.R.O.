@@ -238,7 +238,8 @@
       <workItem from="1572415970288" duration="501000" />
       <workItem from="1572448778565" duration="12295000" />
       <workItem from="1572510293679" duration="4409000" />
-      <workItem from="1572529159908" duration="2970000" />
+      <workItem from="1572529159908" duration="3505000" />
+      <workItem from="1572533109542" duration="566000" />
     </task>
     <servers />
   </component>
@@ -260,7 +261,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$CAA.coverage" NAME="CAA Coverage Results" MODIFIED="1572377887085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$mainFrame.coverage" NAME="mainFrame Coverage Results" MODIFIED="1572532226369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$mainFrame.coverage" NAME="mainFrame Coverage Results" MODIFIED="1572533417798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$widgetsAdd.coverage" NAME="widgetsAdd Coverage Results" MODIFIED="1572297994869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MonApp" />
     <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$widgetsBase.coverage" NAME="widgetsBase Coverage Results" MODIFIED="1572346676909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MonApp" />
     <SUITE FILE_PATH="coverage/CAA_createAnAlgorithm$widgetsMethodes.coverage" NAME="widgetsMethodes Coverage Results" MODIFIED="1572298451444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MonApp" />
