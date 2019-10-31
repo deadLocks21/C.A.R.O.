@@ -185,7 +185,7 @@ def oeilDeMoscou(event):
         quelMenu = "programme"
         printLogTkinter("Ouverture du menu Programme.")
 
-    if ((w * 0.75) - (int(h * POURCENT_FCT_T * 6.7765)) < event.x < w * 0.75 + (int(h * POURCENT_FCT_T * 6.7765))) and (
+    if ((w * 0.75) - (int(h * POURCENT_FCT_T * 6.7765))/2 < event.x < w * 0.75 + (int(h * POURCENT_FCT_T * 6.7765)))/2 and (
             (h * 0.9421) - (int(h * POURCENT_FCT_T)) < event.y < (h * 0.9421) + (int(h * POURCENT_FCT_T))):
         if quelMenu == "fonction":
             nomF = str(nomFonctionEntry.get(1.0, 'end')).replace("\n", "")
@@ -200,7 +200,15 @@ def oeilDeMoscou(event):
             printLogTkinter("Enregistrement du fichier %s.html dans le repertoire %s." % (str(nomFonctionEntry.get(1.0, 'end')).replace("\n", ""), CHEMIN_ENREGISTREMENT))
 
         if quelMenu == "procedure":
-            genProc()
+            nom = str(nomProcedureEntry.get(1.0, 'end')).replace("\n", "")
+            role = str(roleProcedureEntry.get(1.0, 'end')).replace("\n", "")
+            paramE = str(paramEProcedureEntry.get(1.0, 'end'))
+            PSES = str(PSESProcedureEntry.get(1.0, 'end'))
+            varConst = str(varEtConstProcedureEntry.get(1.0, 'end'))
+            jEF = str(jeuxEssaisProcedureEntry.get(1.0, 'end'))
+            principe = str(principeProcedureEntry.get(1.0, 'end')).replace("\n", "")
+            vJE = str(valJEProcedureEntry.get(1.0, 'end'))
+            genProc(nom, role, paramE, PSES, varConst, jEF, principe, vJE, CHEMIN_ENREGISTREMENT)
             printLogTkinter("Enregistrement du fichier %s.html dans le repertoire %s." % (str(nomProcedureEntry.get(1.0, 'end')).replace("\n", ""), CHEMIN_ENREGISTREMENT))
 
         if quelMenu == "programme":
