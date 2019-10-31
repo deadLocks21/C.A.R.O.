@@ -26,14 +26,14 @@ def genFct(nomF, roleF, paramEF, typeValRF, varConstF, jEF, principeF, vJEF, che
         <div>
             <h1><span class="souligner">Glossaire :</span></h1>
             <ul>
-                <li class="niveau1">Paramètres en entrée :</li>
+                <li><span class="niveau1">Paramètres en entrée :</span></li>
                 <ul>
 """ % (nomF, nomF, roleF)
 
     paramE = str(paramEF).split("\n")
-
-    for i in range(len(paramE)-1):
-        codeHTML = codeHTML + "                    <li>" + paramE[i] + "</li>\n"
+    for i in range(len(paramE)):
+        if paramE[i] != '':
+            codeHTML = codeHTML + "                    <li>" + paramE[i] + "</li>\n"
 
     codeHTML = codeHTML + """                </ul>
 
@@ -43,13 +43,14 @@ def genFct(nomF, roleF, paramEF, typeValRF, varConstF, jEF, principeF, vJEF, che
 
                 <p></p>
 
-                <li class="niveau1">Variables et constantes :</li>
+                <li><span class="niveau1">Variables et constantes :</span></li>
                 <ul>
 """ % typeValRF
 
     varConst = str(varConstF).split("\n")
-    for i in range(len(varConstF)-1):
-        codeHTML = codeHTML + "                    <li>" + varConst[i] + "</li>\n"
+    for i in range(len(varConstF)):
+        if varConst[i] != '':
+            codeHTML = codeHTML + "                    <li>" + varConst[i] + "</li>\n"
 
 
     codeHTML = codeHTML + """                </ul>
@@ -134,6 +135,3 @@ ul {
     text-align: justify;
 }
 """)
-
-
-    print(codeHTML)
