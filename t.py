@@ -1,4 +1,4 @@
-res = str(resPG).split("\n")
-    for i in range(len(res)):
-        if res[i] != "":
-            codeHTML = codeHTML + """                    <li>""" + res[i] + "</li>\n"
+main_pil = Image.open('images/main.png')
+main_resolution = (w, h)
+main_img = ImageTk.PhotoImage(main_pil.resize(main_resolution))
+main.create_image(w / 2, h / 2, image=main_img)

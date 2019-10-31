@@ -59,6 +59,11 @@ fonctionC.create_image(w / 2, h / 2, image=fond_img)
 procedureC.create_image(w / 2, h / 2, image=fond_img)
 programmeC.create_image(w / 2, h / 2, image=fond_img)
 
+main_pil = Image.open('images/main.png')
+main_resolution = (w, h)
+main_img = ImageTk.PhotoImage(main_pil.resize(main_resolution))
+main.create_image(w / 2, h / 2, image=main_img)
+
 # Bouton fermer
 fermer_pil = Image.open('images/fermer.png')
 fermerR = (int(h * POURCENT_BT * 1.5), int(h * POURCENT_BT))
@@ -380,8 +385,6 @@ procedureC.create_image(w * 0.75, h * 0.9421, image=boutonGen_img)
 programmeC.create_image(w * 0.75, h * 0.9421, image=boutonGen_img)
 
 root.bind('<Button-1>', oeilDeMoscou)
-
-main.create_rectangle(w / 4 - fonctionR[0] / 2, (h * 0.05) - (fonctionR[1] / 2), w / 4 + fonctionR[0] / 2, (h * 0.05) + (fonctionR[1] / 2), fill    ='#000000')
 
 # Affichage du main
 main.place(x=0, y=0, width=w, height=h)

@@ -1,4 +1,2 @@
-Creer le fichier pour programme
-Modifier le message pour le main
 Renommer l'application
 Cloturer sa création
