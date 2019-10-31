@@ -138,6 +138,7 @@ def reduireProg():
 
 def fermerProg():
     root.quit()
+    root.destroy()
 
 
 def affCanvasFonction():
