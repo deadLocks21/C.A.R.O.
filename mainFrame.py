@@ -20,7 +20,7 @@ POURCENT_BT = 0.035
 POURCENT_BT_CHOIX = 0.08
 POURCENT_BARRE = 0.8
 POURCENT_FCT_T = 0.0787
-CHEMIN_ENREGISTREMENT = "C:\\"
+CHEMIN_ENREGISTREMENT = "D:\\Users\\deadLocks21\\Desktop\\"
 
 # Variables
 quelMenu = "main"
@@ -188,7 +188,15 @@ def oeilDeMoscou(event):
     if ((w * 0.75) - (int(h * POURCENT_FCT_T * 6.7765)) < event.x < w * 0.75 + (int(h * POURCENT_FCT_T * 6.7765))) and (
             (h * 0.9421) - (int(h * POURCENT_FCT_T)) < event.y < (h * 0.9421) + (int(h * POURCENT_FCT_T))):
         if quelMenu == "fonction":
-            genFct()
+            nomF = str(nomFonctionEntry.get(1.0, 'end')).replace("\n", "")
+            roleF = str(roleFonctionEntry.get(1.0, 'end')).replace("\n", "")
+            paramEF = str(paramEFonctionEntry.get(1.0, 'end'))
+            typeValRF = str(typeValRFonctionEntry.get(1.0, 'end')).replace("\n", "")
+            varConst = str(varEtConstFonctionEntry.get(1.0, 'end'))
+            jEF = str(jeuxEssaisFonctionEntry.get(1.0, 'end'))
+            principeF = str(principeFonctionEntry.get(1.0, 'end')).replace("\n", "")
+            vJEF = str(valJEFonctionEntry.get(1.0, 'end'))
+            genFct(nomF, roleF, paramEF, typeValRF, varConst, jEF, principeF, vJEF, CHEMIN_ENREGISTREMENT)
             printLogTkinter("Enregistrement du fichier %s.html dans le repertoire %s." % (str(nomFonctionEntry.get(1.0, 'end')).replace("\n", ""), CHEMIN_ENREGISTREMENT))
 
         if quelMenu == "procedure":
