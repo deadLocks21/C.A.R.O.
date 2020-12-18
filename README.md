@@ -1,3 +1,7 @@
+# CARO, Créateur d'algorithmes relativement optimisés.
+<p>Petit logiciel pour mettre en page les algos que nous réalisions au premier semestre de DUT.</p>
+
+
 Merci de prendre quelques précautions avant d'utiliser ce programme.
 Il utilise la librairie tkinter qui est déjà installé normalement.
 Il utilise aussi la librairie PIL.
